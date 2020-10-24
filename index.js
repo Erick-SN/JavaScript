@@ -14,7 +14,7 @@ console.log(Erick.charAt(3)); // Regresa el caracter en la posicion indicada
 console.log(`${Erick} Nogueron`); // Esta es interpolacion de texto, se utiliza con ``
 console.log(Erick.substr(1, 2)); // Toma de donde a donde quieres sustraer el string
 
-//Desestructuracion de Objetos
+//Desestructuracion de Objetos y arreglos
 const persona = {
   nombre: 'Erick',
   edad: '22',
@@ -23,6 +23,10 @@ const saludo = ({ nombre }) => {
   console.log(`Hola ${nombre}`);
 };
 saludo(persona);
+
+const numeros = [1, 2, 3];
+const [uno, dos, tres] = numeros;
+console.log(uno, dos, tres);
 
 //Arreglos
 
@@ -87,6 +91,7 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 const all = companies.forEach((company) => {
   console.log(company);
 });
+
 //Filter
 const canDrive = ages.filter((age) => age > 18);
 console.log(canDrive);
@@ -106,6 +111,9 @@ const sortedCompanies = companies.sort(
   (start, startTwo) => (start.start > startTwo.start ? -1 : 1) // decendente
 );
 console.log(sortedCompanies);
+
+const sortedAges = ages.sort((a, b) => (a > b ? -1 : 1));
+console.log(sortedAges);
 
 //Reduce
 
