@@ -72,6 +72,7 @@ const totalTalla = personas.reduce((total, { talla }) => (total += talla), 0);
 console.log(totalTalla);
 
 // Mas ejercicios con map, reduce, filter and sort
+
 const companies = [
   { name: 'Company One', category: 'Finance', start: 1981, end: 2003 },
   { name: 'Company Two', category: 'Retail', start: 1992, end: 2008 },
@@ -91,11 +92,6 @@ const all = companies.forEach((company) => {
   console.log(company);
 });
 
-const numberf = [1, 2, 3, 4];
-numberf.forEach((item, index, arr) => {
-  console.log(`a[${index}] = ${item}`);
-});
-
 //Filter
 const canDrive = ages.filter((age) => age > 18);
 console.log(canDrive);
@@ -108,11 +104,6 @@ console.log(retailCompanies);
 //Map
 const companyNames = companies.map(({ name }) => name);
 console.log(companyNames);
-
-const numbers = [1, 2, 3, 4, 5, 6];
-numbers.map((value, index, arr) =>
-  console.log(`${value * 2}, ${index}, ${arr}`)
-);
 
 //sort
 
@@ -128,29 +119,3 @@ console.log(sortedAges);
 
 const ageSum = ages.reduce((total, age) => total + age, 0);
 console.log(ageSum);
-
-//Slice
-
-const numberS = [1, 2, 3, 4];
-console.log(numberS, numberS.slice(0, 3));
-
-//Splice
-
-const numberSp = [1, 2, 3, 4, 5];
-console.log(numberSp, numberSp.splice(1, 3));
-
-//Concat
-
-const a = [1, 2, 3, 4, 5];
-const b = [6, 7, 8];
-
-const c = a.concat(b);
-console.log(c);
-
-//Fill
-const e = [1, 2, 3, 4, 5];
-console.log(e.fill(7, 0, 4));
-
-//Join
-const countriesJoin = ['USA', 'Mexico', 'Argentina'];
-console.log(countriesJoin.join(' - '));
