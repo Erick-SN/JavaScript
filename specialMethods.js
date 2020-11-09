@@ -61,3 +61,17 @@ ${numberSplice.splice(2, 3)}`);
 const a = [1, 2, 3];
 const b = [4, 5, 6];
 console.log(a.concat(b));
+
+//Fill
+const fillTheArray = [0, 1, 2, 3, 4];
+console.log(fillTheArray.fill(5, 1, 4));
+
+//Join
+const countryJoin = ['USA', 'MEXICO', 'ARGENTINA'];
+console.log(countryJoin.join('-'));
+
+//Reverse
+const reverse = [0, 1, 2, 3, 4];
+console.log(reverse.reverse());
+const Erick = 'Mi nombre es Erick';
+console.log(Erick.split('').reverse().join(''));
