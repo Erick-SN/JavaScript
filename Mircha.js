@@ -50,12 +50,29 @@ class Perro extends Animal {
   constructor(nombre, genero, talla) {
     super(nombre, genero);
     this.talla = talla;
+    this.raza = null;
   }
   sonar() {
     console.log('Wau wau');
   }
+
+  //--Metodos estaticos, getters y setters
+
+  static queEres() {
+    //--Metodos estaticos
+    console.log('Soy un perrito wau wau');
+  }
+  get getRaza() {
+    return this.raza;
+  }
+  set setRaza(raza) {
+    this.raza = raza;
+  }
 }
 
 const Canela = new Perro('Canela', 'Hembra', 'Chica');
+Perro.queEres(); // Podemos utilizar este metodo sin creear un objeto de la clase
 Canela.saludar();
 Canela.sonar();
+Canela.setRaza = 'Mestiza'; // Set, JS lo convierte en una propiedad, podemos asignarle el valor con un igual
+Canela.getRaza; // Get, JS lo convierte en una propiedad, esto se ejecutara sin parentesis
