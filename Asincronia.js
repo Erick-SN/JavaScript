@@ -1,4 +1,4 @@
-const getTodos = (callback) => {
+const getTodos = (url, callback) => {
   const request = new XMLHttpRequest();
 
   reques.addEventListener('readystatechange', () => {
@@ -11,18 +11,16 @@ const getTodos = (callback) => {
     }
   });
 
-  request.open('GET', 'https://jsonplaceholder.typicode.com/todos/');
+  request.open('GET', url);
 
   reques.send();
 };
 
-getTodos((err, data) => {
-  console.log('callback fired');
-  if (err) {
-    console.log(err);
-  } else {
+getTodos('someUrl', (err, data) => {
+  console.log(data);
+  getTodos('someUrl2', (err, data) => {
     console.log(data);
-  }
+  });
 });
 
 // Promise example
@@ -42,15 +40,7 @@ getSomething().then(
     console.log(err);
   }
 );
-
-getSomething()
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
-
+//Promise example 2
 const getTodosP = (url) => {
   return new Promise((resolve, reject) => {
     const request = new XMLHttpRequest();
@@ -68,10 +58,14 @@ const getTodosP = (url) => {
   });
 };
 
-getTodosP('someurl')
+getTodosP('Url')
   .then((data) => {
-    console.log(data);
+    console.log('1:', data);
+    return getTodosP('Url');
+  })
+  .then((data) => {
+    console.log('2:', data);
   })
   .catch((err) => {
-    console.error(err);
+    console.log(err);
   });
