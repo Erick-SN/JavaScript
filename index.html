@@ -3,52 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DOM (Document Object Model)</title>
+    <title>Ejercicios con el DOM</title>
+    <link rel="stylesheet" href="./css/dom.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/hambuirgers/1.1.3/hambuirgers.min.css"
+    />
   </head>
   <body>
-    <h3>Manejo del DOM</h3>
-    <p id="que-es">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. A ab fugiat
-      facilis saepe aliquid ad illo corporis temporibus asperiores officia esse
-      iusto beatae voluptates quam maxime, aperiam mollitia numquam ducimus!
-    </p>
-    <nav id="menu">
-      <ul>
-        <li><a href="">Seccion 1</a></li>
-        <li><a href="">Seccion 2</a></li>
-        <li><a href="">Seccion 3</a></li>
-        <li><a href="">Seccion 4</a></li>
-        <li><a href="">Seccion 5</a></li>
-      </ul>
-    </nav>
-    <input type="text" name="nombre" placeholder="Nombre" />
-    <a
-      href="./index.html"
-      class="link-dom"
-      data-description="Document Object Model"
-    ></a>
-    <section class="cards">
-      <figure class="card">
-        <img src="https://placeimg.com/200/200/tech" alt="images" />
-        <figcaption>Tech</figcaption>
-      </figure>
-      <figure class="card">
-        <img src="https://placeimg.com/200/200/animals" alt="images" />
-        <figcaption>Animals</figcaption>
-      </figure>
-      <figure class="card">
-        <img src="https://placeimg.com/200/200/games" alt="images" />
-        <figcaption>Games</figcaption>
-      </figure>
-      <figure class="card">
-        <img src="https://placeimg.com/200/200/people" alt="images" />
-        <figcaption>People</figcaption>
-      </figure>
-      <figure class="card">
-        <img src="https://placeimg.com/200/200/fod" alt="images" />
-        <figcaption>Fod</figcaption>
-      </figure>
-    </section>
+    <header class="header">
+      <h1>Ejercicios del DOM</h1>
+    </header>
+    <button class="hambuirger hambuirger--vortex" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <aside class="panel">
+      <nav class="menu">
+        <a href="#seccion1">Seccion 1</a>
+        <a href="#seccion2">Seccion 2</a>
+        <a href="#seccion3">Seccion 3</a>
+        <a href="#seccion4">Seccion 4</a>
+        <a href="#seccion5">Seccion 5</a>
+      </nav>
+    </aside>
+    <main>
+      <section id="seccion1" class="section">
+        <h2>Seccion1</h2>
+      </section>
+      <section id="seccion2" class="section">
+        <h2>Seccion2</h2>
+      </section>
+      <section id="seccion3" class="section">
+        <h2>Seccion3</h2>
+      </section>
+      <section id="seccion4" class="section">
+        <h2>Seccion4</h2>
+      </section>
+      <section id="seccion4" class="section">
+        <h2>Seccion5</h2>
+      </section>
+    </main>
+    <script src="./dom/menu.js" type="module"></script>
   </body>
-  <script src="./DOM.js"></script>
 </html>
