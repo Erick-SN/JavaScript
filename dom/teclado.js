@@ -15,20 +15,28 @@ export const moveBall = (e, ball, stage) => {
 
   switch (e.keyCode) {
     case 37:
-      e.preventDefault();
-      if (limitBall.left > limitStage.left) x--;
+      if (limitBall.left > limitStage.left) {
+        e.preventDefault();
+        x--;
+      }
       break;
     case 38:
-      e.preventDefault();
-      if (limitBall.top > limitStage.top) y--;
+      if (limitBall.top > limitStage.top) {
+        e.preventDefault();
+        y--;
+      }
       break;
     case 39:
-      e.preventDefault();
-      if (limitBall.right < limitStage.right) x++;
+      if (limitBall.right < limitStage.right) {
+        e.preventDefault();
+        x++;
+      }
       break;
     case 40:
-      e.preventDefault();
-      if (limitBall.bottom < limitStage.bottom) y++;
+      if (limitBall.bottom < limitStage.bottom) {
+        e.preventDefault();
+        y++;
+      }
       break;
     default:
       break;
