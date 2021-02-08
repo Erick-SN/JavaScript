@@ -3,6 +3,7 @@ import countDown from './cuentaRegresiva.js';
 import scrollTop from './scroll.js';
 import darkTheme from './darkTheme.js';
 import responsiveMedia from './responsive.js';
+import testerResponsive from './tester.js';
 import { digitalClock, alarm } from './reloj.js';
 import { shortCuts, moveBall } from './teclado.js';
 
@@ -22,6 +23,7 @@ d.addEventListener('DOMContentLoaded', (e) => {
     frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen></iframe>`
   );
+  testerResponsive('responsive-tester');
 });
 
 d.addEventListener('keydown', (e) => {
