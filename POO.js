@@ -22,6 +22,9 @@ class Desarrollador extends Persona {
     console.log(`Hola!, Soy ${this.nombre} y mi nickname es ${this.nickname}`);
     if (saludo) saludo(this.nombre, true);
   }
+  gamer() {
+    console.log(`soy gamer`);
+  }
 }
 
 const saludo = (nombre, esDev) => {
@@ -33,4 +36,5 @@ let ERICK = new Persona('Erick', 'Sanchez', 1.84);
 let LUIS = new Desarrollador('Luis', 'Flores', 1.84, 'Batau');
 ERICK.saludar(saludo);
 LUIS.saludar(saludo);
+LUIS.gamer();
 console.log(LUIS.soyAlto());
